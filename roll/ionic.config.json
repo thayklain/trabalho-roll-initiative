@@ -1,0 +1,7 @@
+{
+  "name": "roll",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

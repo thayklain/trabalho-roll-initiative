@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <img src="../../assets/d20 red.png" class="logo" width="50"/>
+    <ion-title>
+      Roll For Initiative
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <h1 class="turn"><b>Turn</b></h1>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Name</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>AC</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>HP</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>MP</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>Perception</ion-label>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-list *ngFor="let item of characters">
+      <ion-col>
+        <ion-label>{{item.name}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{item.ac}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{item.hp}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{item.mp}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{item.perception}}</ion-label>
+      </ion-col>
+    </ion-list>
+  </ion-row>
+  </ion-grid>
+      <ion-button [routerLink]="['/addchar']" color="danger">Add Character</ion-button>
+      <ion-button [routerLink]="['/removechar']" color="danger">Remove Character</ion-button>
+</ion-content>
+
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <img src="../../assets/espada cinza.png" class="sword" width="45"/>
+      <a [routerLink]="['/rules']">
+      <img src="../../assets/livro branco.png" class="book" width="90"/>
+    </a>
+    </ion-toolbar>
+  </ion-footer>
